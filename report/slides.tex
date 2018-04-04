@@ -113,12 +113,31 @@ Class \texttt{28} accounts for 22\% while +30 classes account for $<$1\% each
 \subsection{Data Representation}
 
 \begin{frame}
+\frametitle{Bag of Words}
+
+\centering
+\includegraphics[width=0.7\linewidth]{images/bow}
+
+\end{frame}
+
+\begin{frame}
 \frametitle{TF-IDF}
+
+Issue of BoW: some words will be over-represented thus disturb the statistics of rarer but discriminative words
+\\~\\
+\uncover<2>{Reweighing scheme:
+\begin{align*}
+\text{tf-idf}(t,d) &= \text{tf}(t, d) \times \text{idf}(t)\\
+&= f_{t,d} \times \log\left(\frac{N}{n_{t}}\right)
+\end{align*}}
 
 \end{frame}
 
 \begin{frame}
 \frametitle{Doc2Vec \cite{le2014distributed}}
+
+\centering
+\includegraphics[width=0.9\linewidth]{images/doc2vec}
 
 \end{frame}
 
@@ -127,15 +146,37 @@ Class \texttt{28} accounts for 22\% while +30 classes account for $<$1\% each
 \begin{frame}
 \frametitle{Support Vector Machine \cite{Cortes1995}}
 
+Idea: (i) map input data $\textbf{x}$ into a higher dimensional space where the data become separable 
+\begin{equation*}
+\phi : \mathbf{x}\rightarrow\phi(\mathbf{x})\in\mathcal{H}
+\end{equation*}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Support Vector Machine \cite{Cortes1995}}
+
+(ii) use large margin classifier
+
+\centering
+\includegraphics[width=0.8\linewidth]{images/svm}
+
 \end{frame}
 
 \begin{frame}
 \frametitle{Xgboost \cite{chen2016xgboost}}
 
+\centering
+\includegraphics[width=0.8\linewidth]{images/xgb}
+
 \end{frame}
 
 \begin{frame}
 \frametitle{Ensembling}
+Taking advantage of different models to boost prediction accuracy
+\\~\\
+\centering
+\includegraphics[width=0.8\linewidth]{images/ensemble}
 
 \end{frame}
 
